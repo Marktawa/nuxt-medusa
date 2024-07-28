@@ -1,4 +1,4 @@
-// pages/index.vue
+<!-- pages/index.vue -->
 <template>
   <div>
     <h1>Welcome to the Medusa Nuxt Store</h1>
@@ -12,5 +12,6 @@
 </template>
 
 <script setup>
-const { data: { products } } = await useFetch('http://localhost:9000/store/products')
+const { data } = await useFetch('http://localhost:9000/store/products')
+const products = data.value.products;
 </script>
